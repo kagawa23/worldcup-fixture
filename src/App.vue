@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <div v-for="(value,key) in groups" :key="key">
+    <h1>{{ value.name}}</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team1</th>
+          <th>Against</th>
+          <th>Team2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item,index) in value.matches" :key="key+index">
+          <th scope="row">{{ index+1 }}</th>
+          <td><country-display v-bind:country="teams[item.away_team - 1]" /></td>
+          <td>Otto</td>
+          <td>{{ teams[item.away_team - 1].name }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </template>
 
@@ -23,13 +28,15 @@
 export default {
   name: 'app',
   data () {
+   let { groups , teams } = require('../data.json');
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      groups,
+      teams
     }
   }
 }
 </script>
-
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -57,4 +64,11 @@ li {
 a {
   color: #42b983;
 }
+
+// caption {
+//     padding-top: 8px;
+//     padding-bottom: 8px;
+//     color: #777;
+//     text-align: left;
+// }
 </style>
