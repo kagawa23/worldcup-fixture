@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "dusha_plusregular";
+    src: local("☺"),url("../../css/fonts/dusha-regular.eot#iefix") format("embedded-opentype"),url("../../css/fonts/dusha-regular.woff") format("woff"),url("../../css/fonts/dusha-regular.ttf") format("truetype"),url("../../css/fonts/dusha-regular.svg#svgFontName") format("svg")
+}
+.loading{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:11}
+.loading .inner{position:absolute; top:50%; left:50%; color:#fff; font-size:1.142rem; font-weight:700; transform:translate(-50%, -50%); color:#fff;}
+.fi-section-header__wrap {
+    min-width: auto;
+    margin: 0 auto;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0px;
+    background-image: url('../src/assets/fwc_darkbluebg.png');
+    z-index: 10;
+    padding: 0 15%;
+}
+.fi-section-header__emblem {
+    text-decoration: none;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.fi-section-header__emblem img {
+    width: 100px;
+    height: 100px;
+}
+
+.fi-section-header__competition {
+    margin-left: 130px;
+    margin-right: 245px;
+    min-height: 84px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    text-decoration: none;
+    cursor: inherit;
+}
+
+.fi-section-header__competition__title {
+    font-family: "dusha_plusregular";
+     color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+
+}

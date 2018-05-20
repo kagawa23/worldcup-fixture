@@ -3,12 +3,7 @@ import App from './App.vue'
 
 Vue.component('country-display', {
   props: ['country'],
-  // data: function () {
-  //   return {
-  //     count: 0
-  //   }
-  // },
-  template: '<div>{{country.name}}<img class="image-rounded" src={{country.flag}} alt="name"/></div>'
+  template: '<div><img class="image-rounded flag" v-bind:src="country.flag" alt="name"/>{{country.name}}</div>'
 })
 
 new Vue({

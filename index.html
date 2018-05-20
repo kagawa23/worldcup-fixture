@@ -3,10 +3,37 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src=./lib/nebPay.js></script>
+    <script src=./lib/nebulas.js></script>
+    <script>
+      window.NebPay = require("nebpay");
+      window.nebulas = require("nebulas");
+    </script>
     <title>fixture</title>
   </head>
   <body>
+    <div class="fi-section-header__wrap">
+      <a title="2018 FIFA WORLD CUP" class="fi-section-header__emblem">
+        <img src="./src/assets/254645_w.png" class="fi-section-header__emblem__img emblem-workaround"> 
+      </a>
+      <a href="#" class="fi-section-header__competition" title="2018 FIFA World Cup Russia™">
+        <h1 class="fi-section-header__competition__title">2018 FIFA World Cup Russia™</h1>
+        <p class="fi-section-header__competition__date"></p>
+      </a>
+    </div>
     <div id="app"></div>
+    <div class="loading" id="loading"><div class="inner">Loading...</div></div>
     <script src="/dist/build.js"></script>
+    <script>
+      //检测浏览器是否安装星云钱包
+    if(typeof(webExtensionWallet) === "undefined") {
+        alert('星云钱包环境未运行，请安装钱包插件或开启');
+        var dom = document.getElementsByClassName('loading')[0]
+        dom.style.display = 'block';
+    }else{
+        console.log('星云钱包环境运行成功');
+    }
+    </script>
   </body>
 </html>
