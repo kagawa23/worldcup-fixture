@@ -84,8 +84,8 @@ export default {
           if(win + lose + tie === 0 ){
             return;
           }
-          this.win = Math.round(win /(win+lose+tie));
-          this.lose =  Math.round(lose /(win+lose+tie));
+          this.win = Math.round(win /(win+lose+tie)*100);
+          this.lose =  Math.round(lose /(win+lose+tie)*100);
           this.tie = 100 - this.win - this.lose;
         }catch(err) {
           console.log('parse error')
