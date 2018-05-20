@@ -1,6 +1,6 @@
 @font-face {
     font-family: "dusha_plusregular";
-    src: local("☺"),url("../../css/fonts/dusha-regular.eot#iefix") format("embedded-opentype"),url("../../css/fonts/dusha-regular.woff") format("woff"),url("../../css/fonts/dusha-regular.ttf") format("truetype"),url("../../css/fonts/dusha-regular.svg#svgFontName") format("svg")
+    src: local("☺"),url("../../css/fonts/dusha-regular.eot#iefix") format("embedded-opentype"),url("https://www.fifa.com/css/fonts/dusha-regular.woff") format("woff"),url("../../css/fonts/dusha-regular.ttf") format("truetype"),url("../../css/fonts/dusha-regular.svg#svgFontName") format("svg")
 }
 .loading{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:11}
 .loading .inner{position:absolute; top:50%; left:50%; color:#fff; font-size:1.142rem; font-weight:700; transform:translate(-50%, -50%); color:#fff;}
