@@ -4,12 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src=./lib/nebPay.js></script>
-    <script src=./lib/nebulas.js></script>
-    <script>
-      window.NebPay = require("nebpay");
-      window.nebulas = require("nebulas");
-    </script>
     <title>fixture</title>
   </head>
   <body>
@@ -24,7 +18,12 @@
     </div>
     <div id="app"></div>
     <div class="loading" id="loading"><div class="inner">Loading...</div></div>
-    <script src="./dist/build.js"></script>
+    <script src=./lib/nebPay.js></script>
+    <script src=./lib/nebulas.js></script>
+    <script>
+      window.NebPay = require("nebpay");
+      window.nebulas = require("nebulas");
+    </script>
     <script>
       //检测浏览器是否安装星云钱包
     if(typeof(webExtensionWallet) === "undefined") {
@@ -35,5 +34,6 @@
         console.log('星云钱包环境运行成功');
     }
     </script>
+    <script src="./dist/build.js"></script>
   </body>
 </html>
