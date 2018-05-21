@@ -3,11 +3,12 @@
 const nebPay = new NebPay();
 let serialNumber,intervalQuery;
 
-var dappAddress = "n1sQNkEbMdFyNm9JpME1nLTyJHZdLYBqu8A";
+// var dappAddress = "n1sQNkEbMdFyNm9JpME1nLTyJHZdLYBqu8A";
+var dappAddress = "n1zzrZPPDR2Lm8D9c9ZGM3Qd9qqfSAC3x1X";
     //here we use neb.js to call the "get" function to search from the Dictionary
 var Account = nebulas.Account,
     neb = new nebulas.Neb();
-neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 
 const utils = {
     funcIntervalQuery:function() {
